@@ -86,7 +86,12 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
         let item = newsItems[indexPath.row]
         vc.titleString = item.title ?? ""
         vc.webString = item.url ?? ""
-#warning("rets item passed")
+        vc.authorString = item.author ?? "Apple"
+        vc.descString = item.description ?? "Desc"
+        vc.imageString = item.urlToImage ?? ""
+//#warning("rets item passed")
+        
+        
         
 //        present(vc, animated: true)
         navigationController?.pushViewController(vc, animated: true)

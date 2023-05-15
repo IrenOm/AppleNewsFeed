@@ -101,7 +101,7 @@
         <!--Detail View Controller-->
         <scene sceneID="27L-ts-CFJ">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="exJ-Ac-eME" customClass="DetailViewController" customModule="AppleNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" hidesBottomBarWhenPushed="YES" id="exJ-Ac-eME" customClass="DetailViewController" customModule="AppleNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1rW-dS-b3V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,6 +128,11 @@
                                                     <constraint firstAttribute="height" constant="164" id="gHL-zY-HEQ"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="z5k-q3-50y"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="09b-Vx-92a">
                                                 <rect key="frame" x="0.0" y="245" width="256" height="197"/>
@@ -157,6 +162,11 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Read full article">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQP-Xq-edh">
                                                 <rect key="frame" x="141" y="0.0" width="115" height="45"/>
@@ -169,6 +179,11 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Save">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="savedButtonTapped:" destination="exJ-Ac-eME" eventType="touchUpInside" id="NRE-pE-6nV"/>
                                                 </connections>
@@ -188,6 +203,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descTextView" destination="09b-Vx-92a" id="Scg-BW-7Ih"/>
+                        <outlet property="newsImageView" destination="phP-hY-hb6" id="JJV-wj-Pgi"/>
                         <outlet property="titleLable" destination="evt-Lg-hp1" id="gvn-h9-iDV"/>
                     </connections>
                 </viewController>

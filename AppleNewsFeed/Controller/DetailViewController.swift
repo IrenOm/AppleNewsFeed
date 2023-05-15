@@ -7,21 +7,29 @@
 
 import UIKit
 import CoreData
+import SDWebImage
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var newsImageView: UIImageView!
     
+    //#warning("rets item passed")
+    var authorString: String = String()
     var titleString: String = String()
     var webString: String = String()
+    var imageString: String = String()
+    var descString: String = String()
     
-#warning("rets item reseved")
+    @IBOutlet weak var descTextView: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Author name"
+        title = autorString
         titleLable.text = titleString
-
+        newsImageView.sd_setImage(with: URL(string: imageString))
+        descTextView.text = descString
         // Do any additional setup after loading the view.
     }
     
